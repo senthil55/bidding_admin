@@ -1,0 +1,84 @@
+.pus1_a {
+  background-color: aliceblue;
+  box-shadow: 1px 1px 10px rgb(214, 214, 214);
+  padding: 10px 25px;
+  margin: 10px 25px;
+  border-radius: 5px;
+}
+
+.pus1_aa {
+  font-size: 13px;
+  font-weight: bold;
+  color: rgb(54, 54, 54);
+  display: flex;
+  justify-content: space-between;
+}
+
+.pus1_aaa {
+  color: rgb(141, 141, 141);
+  font-weight: 400;
+}
+
+.pus1_ab {
+  color: rgb(141, 141, 141);
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.pus1_ad {
+  color: rgb(57, 102, 185);
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.pus1_ae {
+  padding: 3px 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pus1_aea {
+  color: rgb(141, 141, 141);
+  font-weight: 400;
+  font-size: 12px;
+  min-width: 120px;
+  max-width: 120px;
+}
+.pus1_aeb {
+  color: rgb(141, 141, 141);
+  font-weight: 500;
+  font-size: 12px;
+  min-width: 320px;
+  max-width: 320px;
+}
+
+.pus1_az {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(255, 0, 0);
+}
+
+.pus1_ac {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: rgb(134, 134, 134);
+  font-weight: bold;
+}
+
+.pus1_acb {
+  background-color: rgb(126, 126, 126);
+  border-radius: 4px;
+  padding: 3px 8px;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+}
+.pus1_acc {
+  cursor: pointer;
+  background-color: rgb(5, 165, 53);
+  border-radius: 4px;
+  padding: 3px 8px;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+}
