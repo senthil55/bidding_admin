@@ -1,17 +1,18 @@
 import axios from "axios";
 // const serverN = "localhost:8000";
-const serverN = "52.15.97.24:8000";
+// const serverN = "52.15.97.24:8000";
+const serverN = "biddingbackend.herokuapp.com";
 
 // const baseapi = `http://${serverN}/admin/`;
 // const baseUrlimgkyc = `http://${serverN}/asset/kyc_docs/`;
 // const baseUrlimgprofile = `http://${serverN}/asset/profile/`;
 // const baseUrlimgbids = `http://${serverN}/asset/bids/`;
 // const wsUrl = `ws://${serverN}/admin`;
-const baseapi = `http://${serverN}/admin/`;
-const baseUrlimgkyc = `http://${serverN}/asset/kyc_docs/`;
-const baseUrlimgprofile = `http://${serverN}/asset/profile/`;
-const baseUrlimgbids = `http://${serverN}/asset/bids/`;
-const wsUrl = `ws://${serverN}/admin`;
+const baseapi = `https://${serverN}/admin/`;
+const baseUrlimgkyc = `https://${serverN}/asset/kyc_docs/`;
+const baseUrlimgprofile = `https://${serverN}/asset/profile/`;
+const baseUrlimgbids = `https://${serverN}/asset/bids/`;
+const wsUrl = `wss://${serverN}/admin`;
 
 async function api_init_get(api, setdata, seterror) {
   var headers = {
