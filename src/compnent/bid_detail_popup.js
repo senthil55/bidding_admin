@@ -1,7 +1,11 @@
+// Cammant craate by jaseel for testing the git is working or node "Hallow world"
+
 import React, { useState } from "react";
 import { closebid, deletebid } from "../methord/bids";
 import { baseUrlimgbids, baseUrlimgkyc } from "../module/api_init";
 import BidListingPopup from "./bids_listing_popup";
+
+
 
 function BidDetailsPopup({ item, i, close, buttons, error, reload }) {
   const [showlist, setshowlist] = useState(false);
