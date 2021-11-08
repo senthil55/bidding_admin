@@ -1,13 +1,7 @@
 import axios from "axios";
-// const serverN = "localhost:8000";
-// const serverN = "52.15.97.24:8000";
-const serverN = "biddingbackend.herokuapp.com";
+// const serverN = "localhost";
+const serverN = "3.132.168.71";
 
-// const baseapi = `http://${serverN}/admin/`;
-// const baseUrlimgkyc = `http://${serverN}/asset/kyc_docs/`;
-// const baseUrlimgprofile = `http://${serverN}/asset/profile/`;
-// const baseUrlimgbids = `http://${serverN}/asset/bids/`;
-// const wsUrl = `ws://${serverN}/admin`;
 const baseapi = `http://${serverN}/admin/`;
 const baseUrlimgkyc = `http://${serverN}/asset/kyc_docs/`;
 const baseUrlimgprofile = `http://${serverN}/asset/profile/`;
@@ -31,6 +25,7 @@ async function api_init_get(api, setdata, seterror) {
     });
   return 0;
 }
+
 async function api_init_post(api, body, setdata, seterror) {
   var headers = {
     key: sessionStorage.getItem("authKey"),
@@ -48,6 +43,7 @@ async function api_init_post(api, body, setdata, seterror) {
     });
   return 0;
 }
+
 async function api_init_put(api, body, setdata, seterror) {
   var headers = {
     key: sessionStorage.getItem("authKey"),
@@ -65,6 +61,7 @@ async function api_init_put(api, body, setdata, seterror) {
     });
   return 0;
 }
+
 async function api_init_delete(api, setdata, seterror) {
   var headers = {
     key: sessionStorage.getItem("authKey"),
@@ -72,7 +69,10 @@ async function api_init_delete(api, setdata, seterror) {
   };
   await axios
     .delete(baseapi + api, { headers })
-    .then((res) => setdata(res.data))
+    .then((res) => {
+      console.log(res.data);
+      setdata(res.data);
+    })
     .catch((err) => {
       if (err.toJSON().message === "Network Error")
         seterror("Check Your Internet");

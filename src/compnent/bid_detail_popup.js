@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { closebid } from "../methord/bids";
+import { closebid, deletebid } from "../methord/bids";
 import { baseUrlimgbids, baseUrlimgkyc } from "../module/api_init";
 import BidListingPopup from "./bids_listing_popup";
 
@@ -287,6 +287,14 @@ function BidDetailsPopup({ item, i, close, buttons, error, reload }) {
               <div className="cm1_error">{error}</div>
 
               <div className="cm1_mb1_ac">
+                <div
+                  className="cm1_mb1_acb"
+                  onClick={() =>
+                    deletebid(item[i]._id, setloading, seterror_1, reload)
+                  }
+                >
+                  {loading ? "Deleting..." : "Delete Bid"}
+                </div>
                 <div className="cm1_mb1_acs" onClick={() => setshowlist(true)}>
                   View Bids
                 </div>
@@ -300,6 +308,7 @@ function BidDetailsPopup({ item, i, close, buttons, error, reload }) {
                     {loading ? "Closing..." : "Close Bid"}
                   </div>
                 ) : null}
+
                 {buttons}
               </div>
             </React.StrictMode>

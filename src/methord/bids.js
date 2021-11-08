@@ -1,4 +1,9 @@
-import { api_init_get, api_init_post, api_init_put } from "../module/api_init";
+import {
+  api_init_delete,
+  api_init_get,
+  api_init_post,
+  api_init_put,
+} from "../module/api_init";
 
 async function getBids(settableItems, setmembers, seterror, v) {
   var items = [];
@@ -175,6 +180,15 @@ async function closebid(id, setloading, seterror, reload) {
   }
 }
 
+async function deletebid(id, setloading, seterror, reload) {
+  seterror("");
+  if (window.confirm("Are You sure you want to delete the bid !")) {
+    setloading(true);
+    await api_init_delete("bid?bid_id=" + id, reload, seterror);
+    setloading(false);
+  }
+}
+
 async function bidSearch(setdataT, setdata, reload, e) {
   e.preventDefault();
   var id = e.target.value;
@@ -262,4 +276,5 @@ export {
   cancelAssign,
   closebid,
   bidSearch,
+  deletebid,
 };
