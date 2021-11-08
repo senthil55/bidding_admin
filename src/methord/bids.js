@@ -182,7 +182,7 @@ async function closebid(id, setloading, seterror, reload) {
 
 async function deletebid(id, setloading, seterror, reload) {
   seterror("");
-  if (window.confirm("Are You sure you want to delete the bid !")) {
+  if (window.confirm("Are You sure you want to delete the bid!")) {
     setloading(true);
     await api_init_delete("bid?bid_id=" + id, reload, seterror);
     setloading(false);
