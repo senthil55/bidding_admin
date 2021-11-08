@@ -290,7 +290,10 @@ function BidDetailsPopup({ item, i, close, buttons, error, reload }) {
                 <div
                   className="cm1_mb1_acb"
                   onClick={() =>
-                    deletebid(item[i]._id, setloading, seterror_1, reload)
+                    deletebid(item[i]._id, setloading, seterror_1, () => {
+                      reload();
+                      close();
+                    })
                   }
                 >
                   {loading ? "Deleting..." : "Delete Bid"}
