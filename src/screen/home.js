@@ -259,8 +259,10 @@ function Home() {
         <div className="hm1_max_button" onClick={() => setfullbody(!fullbody)}>
           <img alt="No Img" src={maxIcon} width="20" />
         </div>
-      </div>
-      test camand from backend side
+      </div>git add .
+git commit -m "simple change"
+git push origin main
+
     </div>
   );
 }
