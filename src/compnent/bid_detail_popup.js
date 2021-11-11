@@ -1,5 +1,3 @@
-// Cammant craate by jaseel for testing the git is working or node "Hallow world"
-
 import React, { useState } from "react";
 import { closebid, deletebid } from "../methord/bids";
 import { baseUrlimgbids, baseUrlimgkyc } from "../module/api_init";

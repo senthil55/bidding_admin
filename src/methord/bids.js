@@ -130,6 +130,7 @@ async function createBid(
       telugu: langsetter("Telugu", telungu),
     },
   };
+  setloading(true);
   formData.append("body", JSON.stringify(body));
   await api_init_post(
     "bids",
@@ -140,7 +141,7 @@ async function createBid(
     },
     seterror
   );
-  setloading();
+  setloading(false);
 }
 
 async function confirmBid(id, bid, setloading, seterror, reload) {

@@ -1,8 +1,6 @@
 import { api_init_get, api_init_put } from "../module/api_init";
 
 async function getNoti(settableitem, setitem, seterror, v) {
-  // settableitem([]);
-  // setitem([]);
   var data = [];
   var t_data = [];
   await api_init_get("noti?" + v, (v) => (data = v), seterror);
