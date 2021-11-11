@@ -260,6 +260,7 @@ function Home() {
           <img alt="No Img" src={maxIcon} width="20" />
         </div>
       </div>
+      test camand from backend side
     </div>
   );
 }
