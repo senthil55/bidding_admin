@@ -1,6 +1,6 @@
 import axios from "axios";
-const serverN = "localhost";
-// const serverN = "3.132.168.71";
+// const serverN = "localhost";
+const serverN = "3.132.168.71";
 
 const baseapi = `http://${serverN}/admin/`;
 const baseUrlimgkyc = `http://${serverN}/asset/kyc_docs/`;
