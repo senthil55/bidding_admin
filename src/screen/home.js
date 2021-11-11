@@ -103,13 +103,20 @@ function Home() {
   };
 
   useEffect(() => {
-    client.onopen = () => {};
+    client.onopen = () => {
+      console.log("Web Socket Conected");
+    };
     client.onmessage = (message) => {
       var msg = JSON.parse(message.data);
       console.log(msg);
       if (msg.mem) reloadMemeber();
       if (msg.noti) reloadNoti();
       if (msg.bid) reloadbids();
+    };
+
+    client.onclose = () => {
+      console.log("Web Socket Disconected");
+      console.log((client.onopen = () => {}));
     };
     initialLoad();
   }, []);
@@ -258,7 +265,6 @@ function Home() {
         {loading < 100 ? <Loading value={loading} /> : pages[page].component}
         <div className="hm1_max_button" onClick={() => setfullbody(!fullbody)}>
           <img alt="No Img" src={maxIcon} width="20" />
-
         </div>
       </div>
     </div>
