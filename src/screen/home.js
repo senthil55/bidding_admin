@@ -258,11 +258,9 @@ function Home() {
         {loading < 100 ? <Loading value={loading} /> : pages[page].component}
         <div className="hm1_max_button" onClick={() => setfullbody(!fullbody)}>
           <img alt="No Img" src={maxIcon} width="20" />
-        </div>
-      </div>git add .
-git commit -m "simple change"
-git push origin main
 
+        </div>
+      </div>
     </div>
   );
 }
