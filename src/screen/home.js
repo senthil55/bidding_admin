@@ -19,7 +19,7 @@ import { getNoti } from "../methord/notification";
 import { getMembers, memberSearch } from "../methord/member";
 import { Loading } from "../compnent/warnings";
 
-const client = new W3CWebSocket(wsUrl);
+var client = new W3CWebSocket(wsUrl);
 
 function Home() {
   const [page, setpage] = useState(0);
@@ -102,6 +102,16 @@ function Home() {
     getMembers(setmemberBlockT, setmemberBlock, seterror, "b");
   };
 
+  function reconnectSocket() {
+    console.log("Web Socket Conecting...");
+    setTimeout(() => {
+      client = new W3CWebSocket(wsUrl);
+      client.onopen = () => {
+        console.log("Web Socket Conected");
+      };
+    }, 10000);
+  }
+
   useEffect(() => {
     client.onopen = () => {
       console.log("Web Socket Conected");
@@ -116,7 +126,7 @@ function Home() {
 
     client.onclose = () => {
       console.log("Web Socket Disconected");
-      console.log((client.onopen = () => {}));
+      reconnectSocket();
     };
     initialLoad();
   }, []);

@@ -24,25 +24,25 @@ function Notification({
   const titles = [
     {
       title: "New Notification",
-      count: notiNew.length,
+      count: notiNew.length == 50 ? "50+" : notiNew.length,
       item: notiNew,
       itemT: notiNewT,
     },
     {
       title: "Bids Notification",
-      count: notiBids.length,
+      count: "",
       item: notiBids,
       itemT: notiBidsT,
     },
     {
       title: "Member Notification",
-      count: notiMemeber.length,
+      count: "",
       item: notiMemeber,
       itemT: notiMemeberT,
     },
     {
       title: "All Notification",
-      count: notiAll.length,
+      count: "",
       item: notiAll,
       itemT: notiAllT,
     },
@@ -101,6 +101,7 @@ function Notification({
 
       <MyTable
         fBody={""}
+        nofilter
         onclick={(k) =>
           onNotificationclick(
             titles[page].item[k].type,
