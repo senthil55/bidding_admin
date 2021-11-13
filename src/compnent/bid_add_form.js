@@ -71,8 +71,7 @@ function BidAddForm({}) {
           <Textbox1
             tit="Price Range(one item)(Rs)"
             id="priceS"
-            ph="120/-"
-            type="number"
+            ph="12 - 30"
           />
           <DropDown3 tit="Transportation Type" id="trans" data={transport} />
           <Textbox1
@@ -86,14 +85,14 @@ function BidAddForm({}) {
           <Textbox4 tit="Choose a photo" id="photo" />
         </div>
       </div>
-      <div className="hm1_baf1_a">
+      {/* <div className="hm1_baf1_a">
         <div className="hm1_baf1_ab">Visibility</div>
         <div className="hm1_baf1_1az">
           <DropDown1 tit="State" id="stateV" data={states} />
           <DropDown2 tit="Category" id="categoryV" data={category} />
           <DropDown1 tit="Langage" id="langageV" data={langages} />
         </div>
-      </div>
+      </div> */}
       <div className="hm1_baf1_a">
         <div className="hm1_baf1_ab">Location</div>
         <div className="hm1_baf1_1az">

@@ -238,8 +238,8 @@ function Home() {
     <div className="hm1_screen">
       <div className="hm1_top">
         <div className="hm1_top_a">
-          <img width="120" style={{ paddingBottom: 10 }} src={aqaiLogo} />
-          <img alt="No Img" src={profile} width="60" />
+          <img width="150" style={{ paddingBottom: 10 }} src={aqaiLogo} />
+          {/* <img alt="No Img" src={profile} width="60" /> */}
           <div className="hm1_top_ab">{sessionStorage.getItem("userName")}</div>
           <div className="hm1_top_ac">
             <div className="hm1_top_aca" onClick={() => setpage(0)}>
