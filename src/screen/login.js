@@ -13,20 +13,20 @@ function Login({ route }) {
           <div className="li1_baa">
             <img width="150" src={aqaiLogo} />
             {/* <div className="li1_baaa">LOGO</div> */}
-            <div className="li1_baab">Log in to your account</div>
+            <div className="li1_baab">LOG IN TO YOUR ACCOUNT</div>
             <form onSubmit={(e) => login(e, setloading, seterror)}>
               <input
                 required
                 id="id"
                 className="li1_baac"
-                placeholder="Username"
+                placeholder="USERNAME"
               />
               <input
                 required
                 id="pass"
                 className="li1_baac"
                 type="password"
-                placeholder="Password"
+                placeholder="PASSWORD"
               />
               <div className="cm1_error center">{error}</div>
               <button
@@ -35,7 +35,7 @@ function Login({ route }) {
                 type="submit"
                 className="li1_baad"
               >
-                Login
+                LOGIN
               </button>
             </form>
           </div>
